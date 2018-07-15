@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+CMakeFiles/**
+cmake_install.cmake
+eftp-server
+CMakeCache.txt
+eftp-client
