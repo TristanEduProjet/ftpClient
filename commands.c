@@ -159,7 +159,7 @@ int quit(int sock, char buf[])
 }
 
 //ferme le serveur ftp
-int shutdown(int sock, char buf[])
+int rshutdown(int sock, char buf[])
 {
     int status;
 

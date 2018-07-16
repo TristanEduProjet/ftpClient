@@ -77,7 +77,7 @@ int loop(int sock) {
             }
             printf("%s\n", "Server failed to close the connection\n");
         } else if(!strcmp(command, "shutdown")) {
-            success = shutdown(sock, buf);
+            success = rshutdown(sock, buf);
             if(success) {
                 printf("%s\n", "Server closed\nQuitting..\n");
                 return 0;
