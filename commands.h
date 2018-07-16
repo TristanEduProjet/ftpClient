@@ -22,3 +22,4 @@ int rcd(int sock, char filename[], char buf[]);
 
 int quit(int sock, char buf[]);
 
+int shutdown(int sock, char buf[]);

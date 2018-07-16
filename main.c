@@ -76,6 +76,13 @@ int loop(int sock) {
                 return 0;
             }
             printf("%s\n", "Server failed to close the connection\n");
+        } else if(!strcmp(command, "shutdown")) {
+            success = shutdown(sock, buf);
+            if(success) {
+                printf("%s\n", "Server closed\nQuitting..\n");
+                return 0;
+            }
+            printf("%s\n", "Server failed to close the connection\n");
         } else {
             printf("%s\n", "Please choose a choice from the list.");
         }

@@ -158,3 +158,14 @@ int quit(int sock, char buf[])
     return status;
 }
 
+//ferme le serveur ftp
+int shutdown(int sock, char buf[])
+{
+    int status;
+
+    strcpy(buf, "shutdown");
+    send(sock, buf, 100, 0);
+    recv(sock, &status, 100, 0);
+
+    return status;
+}
